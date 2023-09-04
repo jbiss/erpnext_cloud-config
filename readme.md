@@ -1,6 +1,7 @@
-# NOTE: I created this project soley for me to simplify the install process as much as possible
-#       It is solely meant to install a bench for evauluation purposes only
-#       Much work is needed for a production instance, therefor this should not be used for that purpose
+<h1>ERPNext 14 multipass install with cloud-init<h1>
+<p><b>NOTE:<b> I created this project soley for me to simplify the install process as much as possible
+     It is solely meant to install a bench for evauluation purposes only
+      Much work is needed for a production instance, therefor this should not be used for that purpose.<p>
 
 # if the VM already exists the delete it (note this is a clean install)
 multipass delete ERPNext-1
