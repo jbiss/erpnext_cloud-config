@@ -34,7 +34,7 @@ runcmd:
   - apt install nodejs -y
   - apt install mariadb-server mariadb-client -y
   - npm install -g yarn
-  - echo -e  "\n[mysqld]\ncharacter-set-client-handshake = FALSE\ncharacter-set-server = utf8mb4\ncollation-server = utf8mb4_unicode_ci\n\n[mysql]\ndefault-character-set = utf8mb4">>/etc/mysql/my.cnf
+  - echo "\n[mysqld]\ncharacter-set-client-handshake = FALSE\ncharacter-set-server = utf8mb4\ncollation-server = utf8mb4_unicode_ci\n\n[mysql]\ndefault-character-set = utf8mb4">>/etc/mysql/my.cnf
   - systemctl start mariadb
 
 final_message: "Environment is ready in $UPTIME seconds"
