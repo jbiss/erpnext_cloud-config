@@ -1,9 +1,10 @@
-<h1>ERPNext 14 multipass install with cloud-init<h1>
-<p><b>NOTE:<b> I created this project soley for me to simplify the install process as much as possible
+<h1>ERPNext 14 multipass install with cloud-init</h1>
+<body>
+<p><b>NOTE:</b> I created this project soley for me to simplify the install process as much as possible
      It is solely meant to install a bench for evauluation purposes only
-      Much work is needed for a production instance, therefor this should not be used for that purpose.<p>
+      Much work is needed for a production instance, therefor this should not be used for that purpose.</p>
 
-# if the VM already exists the delete it (note this is a clean install)
+<h3>if the VM already exists the delete it (note this is a clean install)</h3>
 multipass delete ERPNext-1
 multipass purge
 # make sure the <VM name> does not exist
@@ -68,3 +69,5 @@ sudo bench setup production ubuntu
 #         1. still have not figured out the supervisorctl config -- still get warnings on this
 #         2. still get warnings about redis_cache -- need to fix this
 #         3. getting key-collation error in MariaDB config (when creating site)
+
+</body>
