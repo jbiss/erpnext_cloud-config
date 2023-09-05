@@ -8,19 +8,28 @@
 
 ### if the VM already exists the delete it (note this is a clean install)
 
+```
 multipass delete ERPNext-1
 multipass purge
-_make sure the <VM name> does not exist_
+```
+_make sure the instance does not exist_
+```
 multipass list
+```
+
 
 ### create the multipass vm with cloud -init to initialize the environment
-### you can chane the name, cpus and memory to suit the required environment
+you can chane the name, cpus and memory to suit your requirements
 
+```
 multipass launch --name ERPNext-1 --cpus 6 --memory 64G --disk 20G --cloud-init ./cloud-init.yaml
+```
 
 ### Connect to the vm
 
+```
 multipass shell ERPNext-1
+```
 
 **Check /var/log/cloud-init-output.log for completion of setup  _This is important_**
 
@@ -28,29 +37,32 @@ you should see a messsage _Environment is ready in <xxxxx> seconds_ on completio
 
 ### Run mysql_secure_installation
 
+```
 sudo mysql_secure_installation
+```
 (answer y to all, you may want to answer N to allow remote root logon)
 
 also check the vaule for collation-server = utf8mb4_unicode_ci in /etc/mysql/mariadb.conf.d/50-server.cnf
 it may be wrong
 
 ### Environment is done now install frappe framework
-
+```
 cd frappe-bench/
 bench new-site site1.local
+```
 
 ### Now install apps
-
+```
 bench get-app payments
 bench get-app --branch version-14 erpnext
 bench get-app hrms
 
 bench --site site1.local install-app erpnext
 bench --site site1.local install-app hrms
-
+```
 
 ### Now startup the backend
-
+```
 bench --site site1.local enable-scheduler
 sudo bench setup production ubuntu
 bench setup nginx
@@ -58,7 +70,7 @@ sudo supervisorctl restart all
 sudo bench setup production ubuntu
 
 exit
-
+```
 
 ** Now we should have access through _[ip:address:80]_ from the browse in your host machine**
 You can get the ip address of the instance by running multipass list
