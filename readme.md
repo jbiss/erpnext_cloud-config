@@ -42,7 +42,7 @@ sudo mysql_secure_installation
 ```
 (answer y to all, you may want to answer N to allow remote root logon)
 
-also check the vaule for ```collation-server = utf8mb4_unicode_ci``` in /etc/mysql/mariadb.conf.d/50-server.cnf
+also check the vaule for ```collation-server = utf8mb4_unicode_ci``` in ```/etc/mysql/mariadb.conf.d/50-server.cnf```
 it may be wrong
 
 ### Environment is done now install frappe framework
