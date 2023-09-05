@@ -1,7 +1,7 @@
 # ERPNext 14 multipass install with cloud-init
 
 ## **NOTE** I created this project soley for me to simplify the install process as much as possible
-     It is solely meant to install a bench for evauluation purposes only
+     It is solely meant to install a bench for evaluation purposes only
       Much work is needed for a production instance, therefor this should not be used for that purpose.
 
 ## You must install multipass before proceeding
@@ -33,7 +33,7 @@ multipass shell ERPNext-1
 
 **Check /var/log/cloud-init-output.log for completion of setup  _This is important_**
 
-you should see a messsage _Environment is ready in <xxxxx> seconds_ on completion in the log
+you should see a messsage _Environment is ready in \<xxxxx\> seconds_ on completion in the log
 
 ### Run mysql_secure_installation
 
@@ -76,10 +76,11 @@ Then exit from the instance
 exit
 ```
 
-** Now we should have access through _[ip:address:80]_ from the browse in your host machine**
+*** Now we should have access through _[ip:address:80]_ from the browser in your host machine ***
+
 You can get the ip address of the instance by running multipass list
 
-Initial login is User: Administator Password: <Administrator password for bench>
+Initial login is User: Administator Password: \<Administrator password for bench\>
 
 I have tested restarting windows and noticed the multipass istance was taking a very long time to restart. I issued
 a multipass shell ERPNext-1 to connect to it. This seemed to speed up the porcess and the instance started within a few seconds.
