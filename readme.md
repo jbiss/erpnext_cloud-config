@@ -68,7 +68,11 @@ sudo bench setup production ubuntu
 bench setup nginx
 sudo supervisorctl restart all
 sudo bench setup production ubuntu
+```
 
+
+Then exit from the instance
+```
 exit
 ```
 
