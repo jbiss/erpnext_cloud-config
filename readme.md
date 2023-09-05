@@ -65,6 +65,10 @@ You can get the ip address of the instance by running multipass list
 
 Initial login is User: Administator Password: <Administrator password for bench>
 
+I have tested restarting windows and noticed the multipass istance was taking a very long time to restart. I issued
+a multipass shell ERPNext-1 to connect to it. This seemed to speed up the porcess and the instance started within a few seconds.
+No need to restart any of the services in the instance as everything seemed to startup properly.
+
 
 ## Issues: 
          1. still have not figured out the supervisorctl config -- still get warnings on this
