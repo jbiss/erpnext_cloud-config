@@ -86,6 +86,20 @@ I have tested restarting windows and noticed the multipass istance was taking a 
 a multipass shell ERPNext-1 to connect to it. This seemed to speed up the porcess and the instance started within a few seconds.
 No need to restart any of the services in the instance as everything seemed to startup properly.
 
+I have verified on Windows restart you must reconnect to the instance to get it to start proerly. Use the following command after restart
+```
+multipass shell ERPNext-1
+```
+This will complete the startup process and connect to the instance. You can the leave the instance by issuing the command
+```
+exit
+```
+
+Issue the following to get the IP address of your instance
+```
+multipass list
+```
+And you can reconnect and login to this ip address from you browser
 
 ## Issues: 
          1. still have not figured out the supervisorctl config -- still get warnings on this
